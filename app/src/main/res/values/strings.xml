@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">成长宝贝</string>
+
+    <string name="robot">成长宝贝</string>
+    <string name="all">All</string>
+
+    <string name="me">我的</string>
+    <string name="home">Home</string>
+    <string name="discover">社区</string>
+
+    <string name="my_device">我的设备</string>
+
+    <string name="str_p2p_call">呼叫</string>
+    <string name="str_p2p_hangup">挂断</string>
+
+    <!-- CallActivity-->
+    <string name="text_call_title">用户呼叫</string>
+
+    <!--WaitCallActivity-->
+    <string name="text_wait_title">视频邀请</string>
+    <string name="text_user_wait_to">正在等待对方接受邀请&#8230;</string>
+    <string name="text_user_wait_by">Media SDK 邀请&#8230;</string>
+    <string name="text_user_wait_answer">等待接听</string>
+    <string name="text_user_wait_notification">来自%1$s的%2$s&#8230;</string>
+    <string name="text_user_permission">检测未开启悬浮窗权限，需至应用管理获取相应权限</string>
+    <string name="text_user_reject">对方已拒绝您的邀请</string>
+    <string name="text_user_not_found">该号码不存在</string>
+
+    <!-- LandscapeLiveViewActivity-->
+    <string name="text_time_duration">通话时</string>
+    <string name="text_user_calling">正在通话中</string>
+    <string name="text_user_exit">对方已退出</string>
+
+    <string name="text_cancel">取消</string>
+    <string name="text_ok">确定</string>
+
+    <string name="tips_snapshot_complete">照片已保存到手机本地</string>
+    <string name="tips_record_no_video">没有视频!</string>
+    <string name="tips_record_start">开始录像</string>
+    <string name="tips_record_no_size">储存空间不足</string>
+    <string name="tips_record_complete">录像已同步到手机本地</string>
+    <string name="tips_reject_action_1">查看新消息,将会断开此画面连接.\n确认查看?</string>
+    <string name="tips_reject_action_2">是否同意该用户的单向监控邀请?</string>
+    <string name="tips_not_open_function">该功能暂未开放。</string>
+
+    <string name="tips_warning">提醒</string>
+    <string name="tips_loading">加载中&#8230;</string>
+    <string name="tips_network_error">连线至服务器失败\n请确认您的网络状态并重试</string>
+    <string name="tips_key_back">再点一次退出APP</string>
+    <string name="tips_uid_login_success">注册服务器成功</string>
+    <string name="tips_uid_login_failed">注册服务器失败</string>
+    <string name="tips_reject_id">是否挂断</string>
+
+    <!-- HistoryDetailsActivity-->
+    <string name="text_history_details">详情</string>
+    <string name="text_history_incoming">已接</string>
+    <string name="text_history_rejected">已拒接</string>
+    <string name="text_history_missed">未接</string>
+    <string name="text_history_outgoing">呼出</string>
+    <string name="tips_network_low">当前网络状况较差,为保证视频的流畅性,将自动切换至较低分辨率和码率</string>
+    <string name="tips_network_normal">检测到当前网络状况较好,为提高您的通话质量,将自动开启视频通话</string>
+    <string name="tips_network_block">當前網絡狀況非常差,為保證您的通話品質,將自動切至語音通話</string>
+    <string name="tips_network_bad">当前网络状况较差</string>
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="userBean"
+            type="cn.nineox.robot.logic.bean.UserBean"/>
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg_main"
+        >
+
+        <include layout="@layout/toolbar" android:id="@+id/toolbarLayout"></include>
+        <RelativeLayout
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:onClick="@{clickListener}"
+            >
+
+            <ImageView
+                android:id="@+id/head_iv"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_portrait"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/head_iv"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/name_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{userBean.name}"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/l_text_size"
+                    android:paddingLeft="8dp"
+                    android:layout_gravity="left"
+                    />
+
+                <TextView
+                    android:id="@+id/device_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:layout_marginTop="@dimen/row_spacing"
+                    android:text="@{userBean.mobile}"
+                    android:textColor="@color/subText_color"
+                    android:layout_gravity="left"
+                    android:textSize="@dimen/m_text_size"
+                    />
+
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/setting_view_arrow"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/help"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_marginTop="16dp"
+            android:onClick="@{clickListener}"
+            android:layout_height="@dimen/setting_view_min_height">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="帮助与反馈"
+                android:textColor="@android:color/black"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/ic_help"
+                android:drawablePadding="5dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/setting_view_arrow"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

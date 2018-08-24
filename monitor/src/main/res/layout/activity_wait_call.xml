@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+
+        <variable
+            name="callUser"
+            type="cn.nineox.robot.monitor.logic.bean.UserBean"/>
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/qmui_config_color_black"
+        android:orientation="vertical"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/topPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="44dp"
+            >
+
+
+            <ImageView
+                android:id="@+id/head_iv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_head_round"
+
+                />
+            <!--app:imageCircleUrl="@{equipment.icon}"-->
+            <!--app:imageError="@{@drawable/ic_head_round}"-->
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/head_iv"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/name_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="--"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/yaoqing_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="邀请你进行视频通话"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/user_info"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical"-->
+        <!--&gt;-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/head_iv"-->
+        <!--android:layout_width="120dp"-->
+        <!--android:layout_height="120dp"-->
+        <!--app:imageCircleUrl="@{callUser.headPic}"-->
+        <!--app:imageError="@{@drawable/ic_head_round}"-->
+        <!--/>-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:text="@{callUser.name}"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="24sp"-->
+        <!--/>-->
+
+
+        <!--</LinearLayout>-->
+
+
+        <LinearLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="18dp">
+
+
+            <TextView
+                android:id="@+id/hangup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/ic_hangup"
+                android:gravity="center_horizontal"
+                android:onClick="@{clickListener}"
+                android:text="挂断"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                />
+
+
+            <TextView
+                android:id="@+id/accpetCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="86dp"
+                android:drawablePadding="10dp"
+                android:drawableTop="@mipmap/ic_accpetcall"
+                android:gravity="center_horizontal"
+                android:onClick="@{clickListener}"
+                android:text="接听"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

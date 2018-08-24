@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/tools"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="java.util.ArrayList"/>
+
+        <import type="cn.nineox.robot.monitor.logic.bean.ContactBean"/>
+
+        <import type="android.text.TextUtils"/>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+
+        <variable
+            name="data1"
+            type="cn.nineox.robot.monitor.logic.bean.ContactBean"/>
+
+        <variable
+            name="data2"
+            type="cn.nineox.robot.monitor.logic.bean.ContactBean"/>
+
+        <variable
+            name="data3"
+            type="cn.nineox.robot.monitor.logic.bean.ContactBean"/>
+
+        <variable
+            name="data4"
+            type="cn.nineox.robot.monitor.logic.bean.ContactBean"/>
+
+        <variable
+            name="data5"
+            type="cn.nineox.robot.monitor.logic.bean.ContactBean"/>
+
+        <variable
+            name="data6"
+            type="cn.nineox.robot.monitor.logic.bean.ContactBean"/>
+
+        <variable
+            name="data7"
+            type="cn.nineox.robot.monitor.logic.bean.ContactBean"/>
+
+        <variable
+            name="data8"
+            type="cn.nineox.robot.monitor.logic.bean.ContactBean"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/circle_bg"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/add_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:onClick="@{clickListener}"
+            android:tag="@{data1}"
+            >
+
+            <ImageView
+
+                android:id="@+id/add_iv1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@mipmap/ic_add_common_2"
+                android:visibility="@{(TextUtils.isEmpty(data1.headpic) &amp;&amp; !TextUtils.isEmpty(data1.name))? View.INVISIBLE :View.VISIBLE}"
+                />
+
+            <TextView
+                android:id="@+id/add_tv1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/circle_bg_green"
+                android:gravity="center"
+                android:text="@{data1.simpleName}"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:visibility="@{TextUtils.isEmpty(data1.headpic) &amp;&amp; !TextUtils.isEmpty(data1.name) ?View.VISIBLE :View.INVISIBLE}"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/add_2_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="88dp"
+            android:layout_marginRight="88dp"
+            android:layout_marginTop="86dp"
+            >
+
+
+            <RelativeLayout
+                android:id="@+id/add_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:onClick="@{clickListener}"
+                android:tag="@{data2}"
+                >
+
+
+                <ImageView
+                    android:id="@+id/add_iv2"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@mipmap/ic_add_common_2"
+                    android:visibility="@{(TextUtils.isEmpty(data2.headpic) &amp;&amp; !TextUtils.isEmpty(data2.name))? View.INVISIBLE :View.VISIBLE}"
+                    />
+
+
+                <TextView
+                    android:id="@+id/add_tv2"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circle_bg_1"
+                    android:gravity="center"
+                    android:text="@{data2.simpleName}"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    android:visibility="@{TextUtils.isEmpty(data2.headpic) &amp;&amp; !TextUtils.isEmpty(data2.name) ?View.VISIBLE :View.INVISIBLE}"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/add_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:onClick="@{clickListener}"
+                android:tag="@{data3}"
+                >
+
+                <ImageView
+                    android:id="@+id/add_iv3"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@mipmap/ic_add_common_2"
+                    android:visibility="@{(TextUtils.isEmpty(data3.headpic) &amp;&amp; !TextUtils.isEmpty(data3.name))? View.INVISIBLE :View.VISIBLE}"
+                    />
+
+                <TextView
+                    android:id="@+id/add_tv3"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circle_bg_2"
+                    android:gravity="center"
+                    android:text="@{data3.simpleName}"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    android:visibility="@{TextUtils.isEmpty(data3.headpic) &amp;&amp; !TextUtils.isEmpty(data3.name) ?View.VISIBLE :View.INVISIBLE}"
+                    />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/add_4_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/add_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:onClick="@{clickListener}"
+                android:tag="@{data4}"
+                >
+
+                <ImageView
+                    android:id="@+id/add_iv4"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@mipmap/ic_add_common_2"
+                    android:visibility="@{(TextUtils.isEmpty(data4.headpic) &amp;&amp; !TextUtils.isEmpty(data4.name))? View.INVISIBLE :View.VISIBLE}"
+                    />
+
+                <TextView
+                    android:id="@+id/add_tv4"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circle_bg_3"
+                    android:gravity="center"
+                    android:text="@{data4.simpleName}"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    android:visibility="@{TextUtils.isEmpty(data4.headpic) &amp;&amp; !TextUtils.isEmpty(data4.name) ?View.VISIBLE :View.INVISIBLE}"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/add_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:onClick="@{clickListener}"
+                android:tag="@{data5}"
+                >
+
+                <ImageView
+                    android:id="@+id/add_iv5"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@mipmap/ic_add_common_2"
+                    android:visibility="@{(TextUtils.isEmpty(data5.headpic) &amp;&amp; !TextUtils.isEmpty(data5.name))? View.INVISIBLE :View.VISIBLE}"
+                    />
+
+                <TextView
+                    android:id="@+id/add_tv5"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circle_bg_4"
+                    android:gravity="center"
+                    android:text="@{data5.simpleName}"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    android:visibility="@{TextUtils.isEmpty(data5.headpic) &amp;&amp; !TextUtils.isEmpty(data5.name) ?View.VISIBLE :View.INVISIBLE}"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/add_6_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="86dp"
+            android:layout_marginLeft="88dp"
+            android:layout_marginRight="88dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/add_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:onClick="@{clickListener}"
+                android:tag="@{data6}"
+                >
+
+                <ImageView
+                    android:id="@+id/add_iv6"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@mipmap/ic_add_common_2"
+                    />
+
+                <TextView
+                    android:id="@+id/add_tv6"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circle_bg_5"
+                    android:gravity="center"
+                    android:text="@{data6.simpleName}"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    android:visibility="@{TextUtils.isEmpty(data6.headpic) &amp;&amp; !TextUtils.isEmpty(data6.name) ?View.VISIBLE :View.INVISIBLE}"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/add_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:onClick="@{clickListener}"
+                android:tag="@{data7}"
+                >
+
+                <ImageView
+                    android:id="@+id/add_iv7"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@mipmap/ic_add_common_2"
+                    />
+
+                <TextView
+                    android:id="@+id/add_tv7"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circle_bg_3"
+                    android:gravity="center"
+                    android:text="@{data7.simpleName}"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    android:visibility="@{TextUtils.isEmpty(data7.headpic) &amp;&amp; !TextUtils.isEmpty(data7.name) ?View.VISIBLE :View.INVISIBLE}"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/add_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="22dp"
+            android:onClick="@{clickListener}"
+            android:tag="@{data8}"
+            >
+
+            <ImageView
+                android:id="@+id/add_iv8"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@mipmap/ic_add_common_2"
+                />
+
+            <TextView
+                android:id="@+id/add_tv8"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/circle_bg_5"
+                android:gravity="center"
+                android:text="@{data8.simpleName}"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:visibility="@{TextUtils.isEmpty(data8.headpic) &amp;&amp; !TextUtils.isEmpty(data8.name) ?View.VISIBLE :View.INVISIBLE}"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:gravity="center"
+                android:text="点击选取添加位置"
+                android:textColor="@color/title_color"
+                android:textSize="28sp"
+                />
+
+            <TextView
+                android:id="@+id/next"
+                android:layout_width="128dp"
+                android:layout_height="68dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="23dp"
+                android:background="@drawable/btn_ok_bg"
+                android:gravity="center"
+                android:onClick="@{clickListener}"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:onClick="@{clickListener}"
+            android:src="@mipmap/ic_calll"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/select_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="点击选取添加位置"
+                android:layout_gravity="center"
+                android:textSize="28sp"
+                android:textColor="@color/title_color"
+                />
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="125dp"
+                android:layout_height="68dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/btn_ok_bg"
+                android:gravity="center"
+                android:onClick="@{clickListener}"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginTop="23sp"
+                android:textSize="28sp"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

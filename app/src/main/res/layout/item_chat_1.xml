@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="cn.nineox.xframework.core.common.utils.DateUtil" />
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="data"
+            type="cn.nineox.robot.logic.bean.ChatBean" />
+
+        <variable
+            name="itemP"
+            type="cn.nineox.xframework.base.adapter.databinding.BaseItemPresenter" />
+
+        <variable
+            name="position"
+            type="java.lang.Integer" />
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_main"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/head_iv"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_portrait" />
+
+        <TextView
+            android:id="@+id/message_tx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/bg_chat_right"
+            android:text="@{data.content}"
+            android:padding="8dp"
+            android:layout_toLeftOf="@id/head_iv" />
+
+
+    </RelativeLayout>
+</layout>

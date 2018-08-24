@@ -1,0 +1,104 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.liulishuo.filedownloader.model.FileDownloadStatus"/>
+        <import type="android.view.View"/>
+        <variable
+            name="data"
+            type="cn.nineox.robot.appstrore.logic.bean.AppBean"/>
+
+        <variable
+            name="itemP"
+            type="cn.nineox.robot.appstrore.logic.AppListLogic.APPListBaseItemPresenter"/>
+
+
+        <variable
+            name="position"
+            type="java.lang.Integer"/>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:onClick="@{(view)->itemP.onItemClick(data,position)}"
+        android:gravity="center"
+        android:visibility="@{data == null ? View.INVISIBLE :View.VISIBLE}"
+        android:focusable="true"
+        android:padding="6dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+
+
+            <ImageView
+                android:id="@+id/icon_iv"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                app:imageUrl="@{data.icon}"
+                android:layout_centerHorizontal="true"
+                />
+
+
+                <com.white.progressview.CircleProgressView
+                    android:id="@+id/circleProgressBar"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_weight="1"
+                    android:progress="100"
+                    app:innerPadding="3dp"
+                    app:outerSize="0dp"
+                    app:progressReachColor="#80ffffff"
+                    app:progressStyle="FillInnerArc"
+                    app:radius="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/bg_app_item"
+                    />
+
+            <ImageView
+                android:id="@+id/pasue_iv"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:src="@mipmap/ic_puase"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{data.name}"
+                android:textColor="#333333"
+                android:layout_marginTop="12dp"
+                android:textSize="24sp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/icon_iv"
+                />
+
+
+
+        </RelativeLayout>
+        <!--<com.qmuiteam.qmui.widget.QMUIProgressBar-->
+            <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+            <!--android:id="@+id/circleProgressBar"-->
+            <!--android:layout_width="80dp"-->
+            <!--android:layout_height="80dp"-->
+            <!--android:textColor="@color/colorPrimary"-->
+            <!--android:textSize="9sp"-->
+            <!--app:qmui_background_color="?attr/qmui_config_color_gray_8"-->
+            <!--app:qmui_progress_color="@color/colorPrimary"-->
+            <!--app:qmui_stroke_width="2dp"-->
+            <!--android:layout_gravity="right"-->
+            <!--android:visibility="gone"-->
+            <!--app:qmui_type="type_circle"/>-->
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="itemP"
+            type="cn.nineox.xframework.base.adapter.databinding.BaseItemPresenter"/>
+
+
+        <variable
+            name="data"
+            type="cn.nineox.robot.logic.bean.DeviceBean"/>
+
+        <variable
+            name="position"
+            type="java.lang.Integer"/>
+
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/grildview_item_bg"
+        >
+
+
+
+
+        <TextView
+            android:id="@+id/menu_tx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/titleText_color"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:drawablePadding="14dp"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+</layout>

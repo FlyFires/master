@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="cn.nineox.xframework.core.common.utils.DateUtil"/>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+
+        <variable
+            name="data"
+            type="cn.nineox.robot.logic.bean.UsageBean"/>
+
+        <variable
+            name="itemP"
+            type="cn.nineox.xframework.base.adapter.databinding.BaseItemPresenter"/>
+
+        <variable
+            name="position"
+            type="java.lang.Integer"/>
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="2"
+                >
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:drawablePadding="8dp"
+                    android:textColor="@color/titleText_color"
+                    android:textSize="@dimen/m_text_size"
+                    />
+
+                <TextView
+                    android:id="@+id/appName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:text="@{data.appName}"
+                    android:singleLine="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/titleText_color"
+                    android:textSize="@dimen/m_text_size"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text='@{DateUtil.getDiffTime(data.totalTime,"时","分")}'
+                android:textColor="@color/titleText_color"
+                android:textSize="@dimen/m_text_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text='@{data.launchCount + ""}'
+                android:textColor="@color/titleText_color"
+                android:textSize="@dimen/m_text_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

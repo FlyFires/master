@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        >
+
+
+        <com.tutk.libTUTKMedia.CameraEncodePreview
+            android:id="@+id/decode_preview"
+            android:layout_width="1px"
+            android:layout_height="1px"/>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/tools">
+
+    <data>
+        <import type="java.lang.String"/>
+        <import type="android.text.TextUtils"/>
+        <import type="android.view.View"/>
+        <variable
+            name="data"
+            type="cn.nineox.robot.monitor.logic.bean.ContactBean"/>
+
+        <variable
+            name="itemP"
+            type="cn.nineox.xframework.base.adapter.databinding.BaseItemPresenter"/>
+
+
+        <variable
+            name="position"
+            type="java.lang.Integer"/>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{(view)->itemP.onItemClick(data,position)}"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:gravity="center"
+        >
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/circle_bg_green"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:gravity="center"
+            app:imageUrl="@{data.headpic}"
+            android:visibility="@{TextUtils.isEmpty(data.headpic)?View.INVISIBLE :View.VISIBLE}"
+            />
+
+        <TextView
+            android:id="@+id/simpleText"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/circle_bg_green"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:text="@{data.simpleName}"
+            android:visibility="@{TextUtils.isEmpty(data.headpic)?View.VISIBLE :View.INVISIBLE}"
+            />
+
+
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@{data.name}"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/subtitle_color"
+            android:layout_marginTop="9dp"
+            android:layout_below="@id/simpleText"
+            />
+
+
+    </RelativeLayout>
+
+</layout>

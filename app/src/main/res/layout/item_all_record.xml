@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="cn.nineox.xframework.core.common.utils.DateUtil"/>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin"
+        >
+
+        <TextView
+            android:id="@+id/left_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/titleText_color"
+            android:textSize="@dimen/m_text_size"
+            android:text='全部交流记录'
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/titleText_color"
+            android:textSize="@dimen/m_text_size"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/ic_arrow"
+            />
+
+
+    </RelativeLayout>
+
+    <View
+        style="@style/divider" android:layout_alignParentBottom="true"/>
+
+    </LinearLayout>
+</layout>

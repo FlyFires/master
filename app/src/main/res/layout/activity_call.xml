@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+
+        <variable
+            name="data"
+            type="cn.nineox.robot.logic.bean.DeviceBean"/>
+
+        <variable
+            name="equipment"
+            type="cn.nineox.robot.logic.bean.EquipmentGet"/>
+
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/qmui_config_color_black"
+        android:orientation="vertical"
+        android:onClick="@{clickListener}"
+        >
+
+        <com.tutk.libTUTKMedia.CameraDecodePreview
+            android:id="@+id/decode_preview_big"
+            android:onClick="@{clickListener}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <RelativeLayout
+            android:id="@+id/topPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="44dp"
+            android:visibility="gone"
+            >
+
+
+            <ImageView
+                android:id="@+id/head_iv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_head_round"
+                app:imageCircleUrl="@{equipment.icon}"
+                app:imageError="@{@drawable/ic_head_round}"
+                />
+
+
+            <!--<ImageView-->
+            <!--android:id="@+id/swith_camera"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:onClick="@{clickListener}"-->
+            <!--android:src="@drawable/icon_switch_camera"-->
+            <!--/>-->
+
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="12dp"-->
+            <!--android:layout_toLeftOf="@id/swith_camera"-->
+            <!--android:layout_toRightOf="@id/head_iv"-->
+            <!--android:orientation="vertical"-->
+            <!--&gt;-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ellipsize="end"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="@{equipment.midName}"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="20sp"-->
+            <!--/>-->
+
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="18dp"-->
+            <!--android:ellipsize="end"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="邀请你进行视频通话"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="16sp"-->
+            <!--/>-->
+            <!--</LinearLayout>-->
+
+
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/topPanel"
+            android:background="@color/transparent"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:layout_marginLeft="20px"
+            android:id="@+id/rtt_tv"
+            android:text="rtt"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="18dp">
+
+
+            <LinearLayout
+                android:id="@+id/video_btnview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/swith_audiocall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/ic_audiocall_select"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{clickListener}"
+                    android:text="切换语音聊天"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    />
+
+                <TextView
+                    android:id="@+id/accpetCall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/ic_accpetcall"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{clickListener}"
+                    android:text="接听"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    />
+
+                <TextView
+                    android:id="@+id/hangup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/ic_hangup"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{clickListener}"
+                    android:text="挂断"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/swith_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/ic_swith_camera_select"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{clickListener}"
+                    android:text="切换摄像头"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/audio_btnview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/mute_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/ic_mute"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{clickListener}"
+                    android:text="静音"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/hangup_audio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/ic_hangup"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{clickListener}"
+                    android:text="挂断"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    />
+
+                <TextView
+                    android:id="@+id/mianti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/ic_hands_free"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{clickListener}"
+                    android:text="免提"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/audio_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_layout"
+            android:background="@color/qmui_config_color_black"
+            android:gravity="center"
+            android:onClick="@{clickListener}"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                app:imageCircleUrl="@{equipment.icon}"
+                app:imageError="@{@drawable/ic_head_round}"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{equipment.midName}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/l_text_size"
+                />
+
+
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/Call_center_loading"
+            style="@android:style/Widget.Holo.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible"/>
+
+
+    </RelativeLayout>
+</layout>

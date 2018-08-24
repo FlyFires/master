@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f1f1f1"
+        android:orientation="vertical"
+        >
+
+        <include
+            android:id="@+id/toolbarLayout"
+            layout="@layout/toolbar"></include>
+
+        <RelativeLayout
+            android:id="@+id/bananer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbarLayout">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/banner"
+                />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/head_iv"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="@{clickListener}"
+                    android:src="@drawable/ic_portrait"
+                    />
+
+                <TextView
+                    android:id="@+id/name_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="6dp"
+                    android:onClick="@{clickListener}"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <!--
+                <GridView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bananer"
+                    android:background="@color/divider"
+                    android:cacheColorHint="#00000000"
+                    android:fadingEdge="none"
+                    android:horizontalSpacing="1px"
+                    android:numColumns="2"
+                    android:verticalSpacing="1px"
+                    ></GridView>
+                    -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/bananer"
+            android:paddingBottom="15dp"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:paddingTop="15dp"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="2"
+                >
+
+                <ImageView
+                    android:id="@+id/videocall"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{clickListener}"
+                    android:background="@drawable/menu_videocall"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:id="@+id/monitor"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{clickListener}"
+                    android:background="@drawable/menu_monitor"
+                    android:scaleType="fitXY"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+
+
+                <ImageView
+                    android:id="@+id/baobao"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{clickListener}"
+                    android:background="@drawable/menu_notice"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:id="@+id/device_mgr"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{clickListener}"
+                    android:background="@drawable/ic_device_mgr"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:id="@+id/yaoqingma"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{clickListener}"
+                    android:background="@drawable/yaoqingma"
+                    android:scaleType="fitXY"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/circle_bg"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/topPanel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            >
+
+            <ImageView
+                android:id="@+id/contacts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_concat"
+                android:onClick="@{clickListener}"
+                />
+
+            <ImageView
+                android:id="@+id/callrecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="46dp"
+                android:src="@mipmap/ic_callrecord"
+                android:onClick="@{clickListener}"
+                />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/phonePanel"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="120dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="152dp"
+            android:paddingRight="152dp"
+            android:visibility="invisible"
+            >
+
+            <ImageView
+                android:id="@+id/clean_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="@{clickListener}"
+                android:src="@mipmap/ic_delete"
+
+                />
+
+            <ImageView
+                android:id="@+id/add_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:onClick="@{clickListener}"
+                android:src="@mipmap/ic_add"
+
+                />
+
+            <EditText
+                android:id="@+id/phone_edit"
+                android:layout_width="160dp"
+                android:layout_height="32dp"
+                android:layout_toLeftOf="@id/clean_iv"
+                android:layout_toRightOf="@id/add_iv"
+                android:background="@null"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:editable="false"
+                android:textSize="28sp"
+                />
+
+        </RelativeLayout>
+
+        <TableLayout
+
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/num1"
+                    style="@style/phone_number_style"
+                    android:onClick="@{clickListener}"
+                    android:text="1"/>
+
+                <TextView
+                    android:id="@+id/num2"
+                    android:onClick="@{clickListener}"
+                    style="@style/phone_number_style"
+                    android:text="2"/>
+
+                <TextView
+                    android:id="@+id/num3"
+                    android:onClick="@{clickListener}"
+                    style="@style/phone_number_style"
+                    android:text="3"/>
+
+                <TextView
+                    android:id="@+id/num0"
+                    android:onClick="@{clickListener}"
+                    style="@style/phone_number_style"
+                    android:text="0"/>
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/num4"
+                    android:onClick="@{clickListener}"
+                    style="@style/phone_number_style"
+                    android:text="4"/>
+
+                <TextView
+                    android:id="@+id/num5"
+                    android:onClick="@{clickListener}"
+                    style="@style/phone_number_style"
+                    android:text="5"/>
+
+                <TextView
+                    android:id="@+id/num6"
+                    android:onClick="@{clickListener}"
+                    style="@style/phone_number_style"
+                    android:text="6"/>
+
+                <TextView
+                    android:id="@+id/num10"
+                    android:onClick="@{clickListener}"
+                    style="@style/phone_number_style"
+                    android:text="*"/>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/num7"
+                    android:onClick="@{clickListener}"
+                    style="@style/phone_number_style"
+                    android:text="7"/>
+
+                <TextView
+                    android:id="@+id/num8"
+                    android:onClick="@{clickListener}"
+                    style="@style/phone_number_style"
+                    android:text="8"/>
+
+                <TextView
+                    android:id="@+id/num9"
+                    android:onClick="@{clickListener}"
+                    style="@style/phone_number_style"
+                    android:text="9"/>
+
+                <TextView
+                    android:id="@+id/num11"
+                    android:onClick="@{clickListener}"
+                    style="@style/phone_number_style"
+                    android:text="#"/>
+            </TableRow>
+        </TableLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            >
+
+
+            <ImageView
+                android:id="@+id/call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/btn_call"
+                android:gravity="center"
+                android:onClick="@{clickListener}"
+                />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/tools"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="java.lang.String"/>
+
+        <import type="android.text.TextUtils"/>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="data"
+            type="cn.nineox.robot.monitor.logic.bean.Contact"/>
+
+        <variable
+            name="itemP"
+            type="cn.nineox.xframework.base.adapter.databinding.BaseItemPresenter"/>
+
+
+        <variable
+            name="position"
+            type="java.lang.Integer"/>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:gravity="center"
+        android:onClick="@{(view)->itemP.onItemClick(data,position)}"
+        android:onLongClick="@{(view)->itemP.onItemLongClick(data,position)}"
+        android:paddingBottom="18dp"
+        android:paddingTop="18dp"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="154dp"
+                android:layout_height="154dp"
+                android:background="@mipmap/mama"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                />
+
+            <ImageView
+                android:id="@+id/delete_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/image"
+                android:layout_alignTop="@id/image"
+                android:paddingLeft="4dp"
+                android:paddingBottom="4dp"
+                android:visibility="gone"
+                android:src="@mipmap/ic_delete"/>
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image"
+                android:layout_marginTop="8dp"
+                android:textColor="#333333"
+                android:textSize="22sp"
+                android:layout_centerHorizontal="true"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</layout>

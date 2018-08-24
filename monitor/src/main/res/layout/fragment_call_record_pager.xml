@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/circleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/circle_bg"
+        android:orientation="vertical"
+        android:paddingLeft="46dp"
+        android:paddingRight="46dp"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="46dp"
+            android:text="通话记录"
+            android:textColor="@color/title_color"
+            android:textSize="28sp"
+            />
+
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="128dp"
+            android:layout_height="68dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="46dp"
+            android:background="@drawable/btn_ok_bg"
+            android:gravity="center"
+            android:onClick="@{clickListener}"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/back"
+            android:layout_below="@id/title"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/pre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="23dp"
+                android:src="@mipmap/ic_pre"
+                android:onClick="@{clickListener}"
+                />
+
+
+            <ImageView
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="23dp"
+                android:src="@mipmap/ic_next"
+                android:onClick="@{clickListener}"
+                />
+
+
+            <com.tmall.ultraviewpager.UltraViewPagerView
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/pre"
+                android:layout_toLeftOf="@id/next"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="28dp"
+                ></com.tmall.ultraviewpager.UltraViewPagerView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</layout>

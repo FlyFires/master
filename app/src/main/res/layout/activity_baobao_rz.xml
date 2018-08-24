@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg_main"
+        >
+
+        <include
+            android:id="@+id/toolbarLayout"
+            layout="@layout/toolbar"></include>
+        <info.hoang8f.android.segmented.SegmentedGroup
+            xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/segmented"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            segmentedgroup:sc_border_width="2dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            segmentedgroup:sc_tint_color="@color/colorPrimary"
+            segmentedgroup:sc_corner_radius="10dp">
+
+            <RadioButton
+                android:id="@+id/oneday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最近一天"
+                style="@style/RadioButton" />
+
+            <RadioButton
+                android:id="@+id/oneweek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最新一周"
+                style="@style/RadioButton" />
+
+            <RadioButton
+                android:id="@+id/onmouth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最近一月"
+                style="@style/RadioButton" />
+        </info.hoang8f.android.segmented.SegmentedGroup>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+</layout>

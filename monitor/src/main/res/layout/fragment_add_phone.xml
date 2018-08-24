@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/circle_bg"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/contacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:onClick="@{clickListener}"
+            android:src="@mipmap/ic_concat"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:gravity="center_horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/clean_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="@{clickListener}"
+                android:src="@mipmap/ic_delete"
+
+                />
+
+            <EditText
+                android:id="@+id/phone_edit"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/clean_iv"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="请输入电话号码"
+                android:inputType="phone"
+                android:paddingRight="10dp"
+                android:textColor="@color/title_color"
+                android:textSize="20sp"
+                />
+
+        </RelativeLayout>
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerInParent="true"
+            >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/num1"
+                    style="@style/phone_number_style"
+                    android:onClick="@{clickListener}"
+                    android:text="1"/>
+
+                <TextView
+                    android:id="@+id/num2"
+                    style="@style/phone_number_style"
+                    android:onClick="@{clickListener}"
+                    android:text="2"/>
+
+                <TextView
+                    android:id="@+id/num3"
+                    style="@style/phone_number_style"
+                    android:onClick="@{clickListener}"
+                    android:text="3"/>
+
+                <TextView
+                    android:id="@+id/num0"
+                    style="@style/phone_number_style"
+                    android:onClick="@{clickListener}"
+                    android:text="0"/>
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/num4"
+                    style="@style/phone_number_style"
+                    android:onClick="@{clickListener}"
+                    android:text="4"/>
+
+                <TextView
+                    android:id="@+id/num5"
+                    style="@style/phone_number_style"
+                    android:onClick="@{clickListener}"
+                    android:text="5"/>
+
+                <TextView
+                    android:id="@+id/num6"
+                    style="@style/phone_number_style"
+                    android:onClick="@{clickListener}"
+                    android:text="6"/>
+
+                <TextView
+                    android:id="@+id/num10"
+                    style="@style/phone_number_style"
+                    android:onClick="@{clickListener}"
+                    android:text="*"/>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/num7"
+                    style="@style/phone_number_style"
+                    android:onClick="@{clickListener}"
+                    android:text="7"/>
+
+                <TextView
+                    android:id="@+id/num8"
+                    style="@style/phone_number_style"
+                    android:onClick="@{clickListener}"
+                    android:text="8"/>
+
+                <TextView
+                    android:id="@+id/num9"
+                    style="@style/phone_number_style"
+                    android:onClick="@{clickListener}"
+                    android:text="9"/>
+
+                <TextView
+                    android:id="@+id/num11"
+                    style="@style/phone_number_style"
+                    android:onClick="@{clickListener}"
+                    android:text="#"/>
+            </TableRow>
+        </TableLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            >
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="128dp"
+                android:layout_height="68dp"
+                android:background="@drawable/btn_cancel_bg"
+                android:gravity="center"
+                android:onClick="@{clickListener}"
+                android:text="取消"
+                android:textColor="@color/subtitle_color"
+                android:textSize="20sp"
+                />
+
+
+            <TextView
+                android:id="@+id/save"
+                android:layout_width="128dp"
+                android:layout_height="68dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/btn_ok_bg"
+                android:gravity="center"
+                android:onClick="@{clickListener}"
+                android:text="保存"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

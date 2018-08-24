@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+
+    </data>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main"
+        android:orientation="vertical"
+        >
+
+        <include layout="@layout/toolbar" android:id="@+id/toolbarLayout"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@color/white"
+        >
+
+        <EditText
+            android:id="@+id/feedback_ed"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:textSize="@dimen/m_text_size"
+            android:textColor="@color/titleText_color"
+            android:gravity="left|top"
+            android:hint="请输入你的内容"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/button_stroke_gray"
+            android:padding="@dimen/activity_vertical_margin"
+            />
+
+
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/commit"
+            style="@style/Button_Stroke_Blue"
+            android:text="提交"
+            android:layout_marginTop="45dp"
+            android:onClick="@{clickListener}"
+            />
+
+</LinearLayout>
+
+
+    </LinearLayout>
+</layout>

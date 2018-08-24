@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="cn.nineox.xframework.core.common.utils.DateUtil"/>
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+
+        <variable
+            name="data"
+            type="cn.nineox.robot.logic.bean.VideoDetailBean"/>
+
+        <variable
+            name="itemP"
+            type="cn.nineox.xframework.base.adapter.databinding.BaseItemPresenter"/>
+
+        <variable
+            name="position"
+            type="java.lang.Integer"/>
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin"
+        >
+
+        <TextView
+            android:id="@+id/left_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/titleText_color"
+            android:textSize="@dimen/m_text_size"
+            android:text='@{data.typeName}'
+            />
+
+        <TextView
+            android:id="@+id/right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/titleText_color"
+            android:textSize="@dimen/m_text_size"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="8dp"
+            android:text="@{DateUtil.millisToYMDHMString(data.posttime)}"
+            />
+
+
+    </RelativeLayout>
+
+    <View
+        style="@style/divider" android:layout_alignParentBottom="true"/>
+
+    </LinearLayout>
+</layout>

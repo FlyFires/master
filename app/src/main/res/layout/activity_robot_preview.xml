@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/black"
+        >
+            <LinearLayout
+                android:id="@+id/rl_rtc_videos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <com.tutk.libTUTKMedia.CameraDecodePreview
+                    android:id="@+id/decode_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    />
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/btn_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                >
+
+
+                <ImageView
+                    android:id="@+id/record_video_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{clickListener}"
+                    android:src="@drawable/ic_video"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="70dp"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/audio_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:onClick="@{clickListener}"
+                    android:src="@drawable/ic_call"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/take_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{clickListener}"
+                    android:src="@drawable/ic_take_photo"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="400px"
+                android:layout_height="400px"
+                android:background="@drawable/bg_orientation"
+                android:layout_marginLeft="100px"
+                android:layout_marginBottom="70px"
+                android:layout_alignParentBottom="true"
+                >
+                <ImageView
+                    android:id="@+id/head_controll_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_center"/>
+
+                <ImageView
+                    android:id="@+id/head_controll_up"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="26px"
+                    android:background="@drawable/ic_controll_up"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/head_controll_left"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="26px"
+                    android:background="@drawable/ic_controll_left"
+                    android:clickable="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/head_controll_right"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="26px"
+                    android:background="@drawable/ic_controll_right"
+                    android:clickable="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/head_controll_down"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="26px"
+                    android:background="@drawable/ic_controll_down"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="400px"
+                android:layout_height="400px"
+                android:background="@drawable/bg_orientation"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="100px"
+                android:layout_marginRight="70px"
+                android:layout_alignParentBottom="true"
+                >
+                <ImageView
+                    android:id="@+id/feet_controll_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="5dp"
+
+                    android:src="@drawable/ic_center"/>
+
+                <ImageView
+                    android:id="@+id/feet_controll_up"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="26px"
+                    android:background="@drawable/ic_controll_up"
+                    android:clickable="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/feet_controll_left"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="26px"
+                    android:background="@drawable/ic_controll_left"
+                    android:clickable="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/feet_controll_right"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="26px"
+                    android:background="@drawable/ic_controll_right"
+                    android:clickable="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/feet_controll_down"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="26px"
+                    android:background="@drawable/ic_controll_down"
+                    android:clickable="true"
+                    />
+            </RelativeLayout>
+
+
+
+
+        <!--<ImageView-->
+            <!--android:id="@+id/fullscreen_btn"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@id/rl_rtc_videos"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:onClick="@{clickListener}"-->
+            <!--android:src="@drawable/ic_fullscreen"-->
+            <!--/>-->
+
+
+        <LinearLayout
+            android:id="@+id/record_time_layout"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25px"
+            android:background="@drawable/record_video_bg"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/circle_red"
+                />
+
+            <TextView
+                android:id="@+id/record_time_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:textColor="#fffefe"
+                android:textSize="16sp"
+                android:layout_marginBottom="1dp"
+                />
+
+        </LinearLayout>
+
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/swith_btn"
+            style="@style/Button_Stroke_Blue"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="45dp"
+            android:onClick="@{clickListener}"
+            android:text="切换"
+            android:visibility="gone"/>
+
+
+        <cn.nineox.xframework.core.weiget.TitleBar
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ProgressBar
+            android:id="@+id/preview_center_loading"
+            style="@android:style/Widget.Holo.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible"/>
+    </RelativeLayout>
+</layout>

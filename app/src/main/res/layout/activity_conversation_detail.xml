@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+
+        <variable
+            name="equipment"
+            type="cn.nineox.robot.logic.bean.EquipmentGet"/>
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main"
+        android:orientation="vertical"
+        >
+
+        <include layout="@layout/toolbar" android:id="@+id/toolbarLayout"></include>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            >
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/robot"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/robot_name"
+            android:textColor="@color/titleText_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{equipment.midName}"
+            android:textSize="@dimen/m_text_size"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_gravity="center"
+            />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/record_video_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/record_chat_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</layout>

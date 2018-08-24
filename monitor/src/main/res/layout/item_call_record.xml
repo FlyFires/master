@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="cn.nineox.xframework.core.common.utils.DateUtil"/>
+        <variable
+            name="data"
+            type="cn.nineox.robot.monitor.logic.bean.TelRecordBean"/>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="23dp"
+        android:paddingBottom="23dp"
+        >
+
+
+        <ImageView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{data.name}"
+            android:textColor="@color/title_color"
+            android:textSize="20sp"
+            android:paddingLeft="20dp"
+            android:layout_toRightOf="@id/type"
+            android:layout_centerVertical="true"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{DateUtil.formatDate(data.startTime)}"
+            android:layout_alignParentRight="true"
+            android:textColor="#999999"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            />
+
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+        android:drawable="@drawable/ic_device_mgr_s"/> <!-- pressed -->
+    <item android:state_focused="true"
+        android:drawable="@drawable/ic_device_mgr_n"/> <!-- focused -->
+    <item android:drawable="@drawable/ic_device_mgr_n"/> <!-- default -->
+</selector>

@@ -1,0 +1,68 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.liulishuo.filedownloader.model.FileDownloadStatus"/>
+        <import type="android.view.View"/>
+        <variable
+            name="data"
+            type="cn.nineox.robot.appstrore.logic.bean.AppBean"/>
+
+        <variable
+            name="itemP"
+            type="cn.nineox.robot.appstrore.logic.MeLogic.APPListBaseItemPresenter"/>
+
+
+        <variable
+            name="position"
+            type="java.lang.Integer"/>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:onClick="@{(view)->itemP.onItemClick(data,position)}"
+        android:gravity="center"
+        android:visibility="@{data == null ? View.INVISIBLE :View.VISIBLE}"
+        android:focusable="true"
+        android:padding="6dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+
+
+            <ImageView
+                android:id="@+id/icon_iv"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_centerHorizontal="true"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{data.name}"
+                android:textColor="#333333"
+                android:layout_marginTop="12dp"
+                android:textSize="24sp"
+                android:layout_centerHorizontal="true"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:maxEms="6"
+                android:layout_below="@id/icon_iv"
+                />
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/category_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/category_head"
+                />
+
+
+
+
+
+
+
+            <ImageView
+                android:id="@+id/me_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/category_me_s"
+                android:onClick="@{clickListener}"
+                android:layout_marginLeft="9dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_shenzi"
+                android:layout_marginLeft="31dp"
+                />
+
+
+
+            <ImageView
+                android:id="@+id/erge_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/category_erge_n"
+                android:onClick="@{clickListener}"
+                android:layout_marginLeft="9dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_shenzi"
+                android:layout_marginLeft="31dp"
+                />
+
+            <ImageView
+                android:id="@+id/gushi_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/category_gushi_n"
+                android:onClick="@{clickListener}"
+                android:layout_marginLeft="9dp"
+                />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_shenzi"
+                android:layout_marginLeft="31dp"
+                />
+            <ImageView
+                android:id="@+id/video_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/category_video_n"
+                android:onClick="@{clickListener}"
+                android:layout_marginLeft="9dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_shenzi"
+                android:layout_marginLeft="31dp"
+                />
+
+            <ImageView
+                android:id="@+id/yaojiao_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/category_youjiao_n"
+                android:onClick="@{clickListener}"
+                android:layout_marginLeft="9dp"
+                />
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_tab_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/category_layout"
+            />
+    </RelativeLayout>
+
+</layout>

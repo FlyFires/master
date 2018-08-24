@@ -1,0 +1,81 @@
+<resources>
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/QMUI.Compat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--在无需多点触控的页面上，建议关闭多点触控-->
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+    <style name="phone_number_style">
+        <item name="android:layout_width">@dimen/phone_number_width</item>
+        <item name="android:layout_height">@dimen/phone_number_width</item>
+        <item name="android:textSize">@dimen/phone_number_textsize</item>
+        <item name="android:textColor">@color/title_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">12dp</item>
+        <item name="android:background">@drawable/circle_number_bg</item>
+    </style>
+
+
+    <style name="AppTheme.Translucent">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+
+
+    <style name="CustomDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+
+    <!-- Base application theme. -->
+    <style name="CustomProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@drawable/bg_color_white</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomBottomDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
+    <style name="window_anim_style">
+        <item name="android:windowEnterAnimation">@anim/window_in_anim</item>
+        <item name="android:windowExitAnimation">@anim/window_out_anim</item>
+    </style>
+
+    <style name="bottom_anim_style">
+        <item name="android:windowEnterAnimation">@anim/bottom_in_anim</item>
+        <item name="android:windowExitAnimation">@anim/bottom_out_anim</item>
+    </style>
+
+
+</resources>

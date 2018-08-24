@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="cn.nineox.xframework.core.common.utils.DateUtil"/>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+
+        <variable
+            name="data"
+            type="cn.nineox.robot.logic.bean.ListByUserType"/>
+
+        <variable
+            name="itemP"
+            type="cn.nineox.xframework.base.adapter.databinding.BaseItemPresenter"/>
+
+        <variable
+            name="position"
+            type="java.lang.Integer"/>
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="4dp"
+        android:onClick="@{(view)->itemP.onItemClick(data,position)}"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/head_iv"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_centerHorizontal="true"  
+            android:src="@drawable/ic_portrait"/>
+
+
+        <ImageView
+            android:id="@+id/select_iv"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icon_select_head"/>
+
+        <TextView
+            android:id="@+id/name_tx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{data.userType.desc}"
+            android:textColor="@color/titleText_color"
+            android:layout_below="@id/head_iv"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/m_text_size"/>
+
+
+    </RelativeLayout>
+</layout>

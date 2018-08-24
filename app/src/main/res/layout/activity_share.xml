@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main"
+        android:orientation="vertical"
+        >
+
+        <include
+            android:id="@+id/toolbarLayout"
+            layout="@layout/toolbar"></include>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:text="分享到"
+            android:textColor="@color/subText_color"
+            android:textSize="14sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            >
+
+            <TextView
+                android:id="@+id/qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_share_qq"
+                android:text="QQ好友"
+                android:textColor="@color/titleText_color"
+                android:textSize="14sp"
+                android:onClick="@{clickListener}"
+                android:gravity="center_horizontal"
+                android:drawablePadding="4dp"
+                />
+
+            <!--<TextView-->
+                <!--android:id="@+id/wechatmonents"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="32dp"-->
+                <!--android:drawableTop="@drawable/ic_wechat_friends"-->
+                <!--android:text="朋友圈"-->
+                <!--android:textColor="@color/titleText_color"-->
+                <!--android:textSize="14sp"-->
+                <!--android:onClick="@{clickListener}"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:drawablePadding="4dp"-->
+                <!--/>-->
+
+            <TextView
+                android:id="@+id/wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:drawableTop="@drawable/ic_share_wechat"
+                android:text="微信好友"
+                android:textColor="@color/titleText_color"
+                android:textSize="14sp"
+                android:onClick="@{clickListener}"
+                android:gravity="center_horizontal"
+                android:drawablePadding="4dp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:text="分享的人"
+            android:textColor="@color/subText_color"
+            android:textSize="14sp"
+            />
+
+        <!--<com.scwang.smartrefresh.layout.SmartRefreshLayout-->
+            <!--android:id="@+id/refreshLayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/white"-->
+            <!--&gt;-->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_vertical_margin"
+                ></android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/empty_text"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textSize="@dimen/m_text_size"
+                android:textColor="@color/subText_color"
+                android:text="暂无数据"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                />
+
+        </RelativeLayout>
+        <!--</com.scwang.smartrefresh.layout.SmartRefreshLayout>-->
+
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:layout_marginTop="16dp"
+            android:text="取消分享"
+            android:textColor="@color/qmui_config_color_red"
+            android:textSize="16sp"
+            android:onClick="@{clickListener}"
+            android:gravity="center"
+            />
+    </LinearLayout>
+</layout>
